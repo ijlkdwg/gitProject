@@ -6,10 +6,8 @@
     <groupId>com.wsq</groupId>
     <artifactId>jhone-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>com.wsq</groupId>
-  <artifactId>jhone-service</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  </parent> 
+  <artifactId>jhone-service</artifactId> 
   <packaging>war</packaging>
   <name>jhone-service Maven Webapp</name>
   <url>http://maven.apache.org</url>

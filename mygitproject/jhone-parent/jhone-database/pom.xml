@@ -7,9 +7,7 @@
     <artifactId>jhone-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.wsq</groupId>
   <artifactId>jhone-database</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>jhone-database Maven Webapp</name>
   <url>http://maven.apache.org</url>
