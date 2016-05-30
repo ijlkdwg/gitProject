@@ -1,4 +1,4 @@
-package com.wsq.jhone.loginservice.impl;
+package com.wsq.jhone.loginservice;
 
 public interface ILoginService {
 
