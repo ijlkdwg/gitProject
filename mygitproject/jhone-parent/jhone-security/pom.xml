@@ -7,14 +7,21 @@
     <artifactId>jhone-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>jhone-controller</artifactId>
-  <packaging>jar</packaging>
-  <name>jhone-controller Maven Webapp</name>
+  <groupId>com.wsq</groupId>
+  <artifactId>jhone-security</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>jhone-security Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
-    <finalName>jhone-controller</finalName>
+    <finalName>jhone-security</finalName>
   </build>
 </project>
