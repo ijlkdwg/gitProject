@@ -5,7 +5,7 @@
 	<artifactId>jhone-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>jhone-parent</name>
+	<name>父项目</name>
 	<description>父项目提供jar包</description>
 	<modules>
 		<module>jhone-database</module>
@@ -55,6 +55,8 @@
 		<fileupload.version>1.3.2</fileupload.version>
 		<!-- commons-logging -->
 		<logging.version>1.2</logging.version>
+		<!-- tomcat7 jar  -->
+		<tomcat.version>7.0.37</tomcat.version>
 	</properties>
 	<dependencies>
 		<!-- 测试jar -->
@@ -188,7 +190,12 @@
 			<artifactId>asm</artifactId>
 			<version>${asm.version}</version>
 		</dependency>
-
+		<!-- tomcat7 jar -->
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-servlet-api</artifactId>
+		   	<version>${tomcat.version}</version>
+		</dependency>
 		<!-- mybatis jar -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -205,15 +212,14 @@
 			<groupId>org.mybatis.generator</groupId>
 			<artifactId>mybatis-generator-core</artifactId>
 			<version>1.3.2</version>
-		</dependency>
-
+		</dependency> 
 		<!-- javaee 7.0 api jar -->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>${javaee.version}</version>
 		</dependency>
-
+		 
 		<!-- 阿里巴巴jar包 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -265,6 +271,29 @@
 		</dependency>	
 	</dependencies>
 	<build>
+	 <resources>
+          <resource>
+             <directory>src/main/java</directory>
+             <includes>
+                 <include>**/*.xml</include>
+                 <include>**/*.xls</include>
+                 <include>**/*.xsd</include> 
+                 <include>**/*.txt</include>
+                 <include>**/*.docx</include>
+             </includes>
+          </resource>
+          <resource>
+              <directory>src/main/resources</directory>
+              <includes>
+			  	<include>**/*.xml</include>
+                <include>**/*.properties</include>
+                <include>**/*.xls</include> 
+                <include>**/*.xsd</include> 
+                <include>**/*.txt</include>
+                 <include>**/*.docx</include>
+              </includes>
+         </resource>
+        </resources>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -325,6 +354,5 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-	</build>
-
+	</build>	
 </project>

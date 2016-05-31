@@ -9,7 +9,7 @@
   </parent> 
   <artifactId>jhone-service</artifactId> 
   <packaging>jar</packaging>
-  <name>jhone-service Maven Webapp</name>
+  <name>业务逻辑层提供接口实现</name>
   <url>http://maven.apache.org</url>
   <dependencies> 
   </dependencies>

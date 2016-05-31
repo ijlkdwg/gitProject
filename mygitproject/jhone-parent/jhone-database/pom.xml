@@ -9,7 +9,7 @@
   </parent>
   <artifactId>jhone-database</artifactId>
   <packaging>jar</packaging>
-  <name>jhone-database Maven Webapp</name>
+  <name>数据库连接</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     

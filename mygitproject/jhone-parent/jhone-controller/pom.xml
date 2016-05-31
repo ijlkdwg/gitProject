@@ -9,10 +9,15 @@
   </parent>
   <artifactId>jhone-controller</artifactId>
   <packaging>jar</packaging>
-  <name>jhone-controller Maven Webapp</name>
+  <name>控制层</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    
+     <!-- 引入咱自己的jar包封装Ok打包完成 -->
+     <dependency>
+     	<groupId>com.wsq</groupId>
+     	<artifactId>jhone-security</artifactId>
+     	<version>0.0.1-SNAPSHOT</version>
+     </dependency>
   </dependencies>
   <build>
     <finalName>jhone-controller</finalName>
