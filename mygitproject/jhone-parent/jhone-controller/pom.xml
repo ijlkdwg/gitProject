@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>jhone-controller</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>jhone-controller Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
