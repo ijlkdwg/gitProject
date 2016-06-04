@@ -1,0 +1,9 @@
+2016-06-04 12:47:07 [INFO ] FrameworkServlet 'spring': initialization started
+localhost-startStop-12016-06-04 12:47:07 [INFO ] Refreshing WebApplicationContext for namespace 'spring-servlet': startup date [Sat Jun 04 12:47:07 CST 2016]; parent: Root WebApplicationContext
+localhost-startStop-12016-06-04 12:47:07 [INFO ] Loading XML bean definitions from class path resource [sources/spring-mvc.xml]
+localhost-startStop-12016-06-04 12:47:08 [INFO ] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+localhost-startStop-12016-06-04 12:47:09 [INFO ] Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-servlet': startup date [Sat Jun 04 12:47:07 CST 2016]; parent: Root WebApplicationContext
+localhost-startStop-12016-06-04 12:47:09 [INFO ] Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-servlet': startup date [Sat Jun 04 12:47:07 CST 2016]; parent: Root WebApplicationContext
+localhost-startStop-12016-06-04 12:47:09 [INFO ] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+localhost-startStop-12016-06-04 12:47:09 [INFO ] FrameworkServlet 'spring': initialization completed in 2424 ms
+localhost-startStop-1

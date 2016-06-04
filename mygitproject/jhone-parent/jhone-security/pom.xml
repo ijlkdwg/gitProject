@@ -1,57 +1,81 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.wsq</groupId>
-    <artifactId>jhone-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent> 
-  <artifactId>jhone-security</artifactId> 
-  <packaging>war</packaging>
-  <name>安全框架层</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-  	<!-- servlet api 版本 -->
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.wsq</groupId>
+		<artifactId>jhone-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>jhone-security</artifactId>
+	<packaging>war</packaging>
+	<name>安全框架层</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<!-- servlet api 版本 -->
 		<servlet.version>3.1.0</servlet.version>
-  </properties>
-  <dependencies>
-  <!-- 引入咱自己的jar包封装Ok打包完成 -->
-     <dependency>
-     	<groupId>com.wsq</groupId>
-     	<artifactId>jhone-database</artifactId>
-     	<version>0.0.1-SNAPSHOT</version>
-     </dependency> 
-     <!-- servlet api jar --> 
-		 <dependency>
-			    <groupId>javax.servlet</groupId>
-			    <artifactId>javax.servlet-api</artifactId>
-			    <version>${servlet.version}</version>
-			    <scope>provided</scope>
-		 </dependency> 
-		 <dependency>
-			 <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
+		<webmagic.version>0.5.3</webmagic.version>
+	</properties>
+	<dependencies>
+		<!-- 引入咱自己的jar包封装Ok打包完成 -->
+		<dependency>
+			<groupId>com.wsq</groupId>
+			<artifactId>jhone-database</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- servlet api jar -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
 			<scope>provided</scope>
 			<version>2.3.1</version>
 		</dependency>
-  </dependencies>
-  <build>
-   <pluginManagement>
-   	<plugins>
-   		  <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <port>8088</port>
-                    <path>/jhone-security</path>
-                    <uriEncoding>UTF-8</uriEncoding>
-                    <finalName>mgr</finalName>
-                    <server>tomcat</server>
-                </configuration>
-            </plugin>
-   	</plugins>
-   </pluginManagement>
-  </build>
+		<!-- 引入爬虫的jar
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-core</artifactId>
+			<version>${webmagic.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-extension</artifactId>
+			<version>${webmagic.version}</version>
+		</dependency>
+		<dependency>
+    <groupId>us.codecraft</groupId>
+    <artifactId>webmagic-extension</artifactId>
+    <version>0.5.3</version>
+    <exclusions>
+        <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency> -->
+	</dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<port>8088</port>
+						<path>/jhone-security</path>
+						<uriEncoding>UTF-8</uriEncoding>
+						<finalName>mgr</finalName>
+						<server>tomcat</server>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

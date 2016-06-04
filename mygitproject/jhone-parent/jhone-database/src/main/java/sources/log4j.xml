@@ -24,7 +24,7 @@
     <appender name="LOG.INFO" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="${webapp.root}/ssm/info.log" />
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n" />
+            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n%t" />
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
             <param name="LevelMin" value="INFO" />
@@ -34,7 +34,7 @@
     <appender name="LOG.WARN" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="${webapp.root}/ssm/warn.log" />
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n" />
+            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n%t" />
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
             <param name="LevelMin" value="WARN" />
@@ -44,7 +44,7 @@
     <appender name="LOG.ERROR" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="${webapp.root}/ssm/error.log" />
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n" />
+            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n%t" />
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
             <param name="LevelMin" value="ERROR" />
@@ -54,14 +54,13 @@
     <appender name="LOG.FATAL" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="${webapp.root}/ssm/fatal.log" />
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n" />
+            <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %m%n%t" />
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
             <param name="LevelMin" value="FATAL" />
             <param name="LevelMax" value="FATAL" />
         </filter>
-    </appender>
-    
+    </appender> 
     <!-- 下面是打印mybatis语句的配置-->
      <logger name="com.ibatis" additivity="true"> 
       <level value="DEBUG" /> 
