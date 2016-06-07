@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="<%=request.getContextPath()%>/bootstrap/css/ace-ie.min.css" />
 <![endif]-->
 <!--------------------------js----------------------->
+<script src="<%=request.getContextPath()%>/bootstrap/js/jquery.min.js"></script> 
 <!-- ace 头部设置js -->
 <script src="<%=request.getContextPath()%>/bootstrap/js/ace-extra.min.js"></script>
 <!--html5--->
@@ -407,7 +408,7 @@
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="icon-desktop"></i>
-							<span class="menu-text"> UI &amp; Elements </span>
+							<span class="menu-text"> UI &amp; 节点 </span>
 
 							<b class="arrow-angle-down"></b>
 						</a>
@@ -418,7 +419,7 @@
 							<li class="">
 								<a href="#" class="dropdown-toggle">
 									<i class="icon-caret-right"></i> 
-									Layouts
+									布局
 									<b class="arrow-angle-down"></b>
 								</a>
 
@@ -427,7 +428,7 @@
 									<li class="">
 										<a href="top-menu.html">
 											<i class="icon-caret-right"></i>
-											Top Menu
+											顶部菜单
 										</a>
 
 										<b class="arrow"></b>
@@ -465,7 +466,7 @@
 							<li class="">
 								<a href="typography.html">
 									<i class="icon-caret-right"></i>
-									Typography
+									排版
 								</a>
 
 								<b class="arrow"></b>
@@ -570,7 +571,7 @@
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="icon-list"></i>
-							<span class="menu-text"> Tables </span> 
+							<span class="menu-text"> 表格 </span> 
 							<b class="arrow-angle-down"></b>
 						</a> 
 						<b class="arrow"></b> 
@@ -617,7 +618,7 @@
 							<li class="">
 								<a href="form-wizard.html">
 									<i class="icon-caret-right"></i>
-									Wizard &amp; 验证
+									向导 &amp; 验证
 								</a>
 
 								<b class="arrow"></b>
@@ -645,8 +646,8 @@
 
 					<li class="">
 						<a href="widgets.html">
-							<i class="icon-list-alt"></i>
-							<span class="menu-text"> Widgets </span>
+							<i class="icon-list-alt gray"></i>
+							<span class="menu-text"> 小部件 </span>
 						</a>
 
 						<b class="arrow"></b>
@@ -654,10 +655,10 @@
 
 					<li class="">
 						<a href="calendar.html">
-							<i class="icon-calendar"></i>
+							<i class="icon-calendar red"></i>
 
 							<span class="menu-text">
-								Calendar
+								日历
 
 								<!-- #section:basics/sidebar.layout.badge -->
 								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -674,7 +675,7 @@
 					<li class="">
 						<a href="gallery.html">
 							<i class="icon-picture green"></i>
-							<span class="menu-text"> Gallery </span>
+							<span class="menu-text"> 画布 </span>
 						</a>
 
 						<b class="arrow"></b>
@@ -683,7 +684,7 @@
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="icon-tag"></i>
-							<span class="menu-text"> More Pages </span>
+							<span class="menu-text"> 更多页面 </span>
 
 							<b class="arrow-angle-down"></b>
 						</a>
@@ -694,7 +695,7 @@
 							<li class="">
 								<a href="profile.html">
 									<i class="icon-caret-right"></i>
-									User Profile
+									用户简介
 								</a>
 
 								<b class="arrow"></b>
@@ -703,7 +704,7 @@
 							<li class="">
 								<a href="inbox.html">
 									<i class="icon-caret-right"></i>
-									Inbox
+									收件箱
 								</a>
 
 								<b class="arrow"></b>
@@ -712,7 +713,7 @@
 							<li class="">
 								<a href="pricing.html">
 									<i class="icon-caret-right"></i>
-									Pricing Tables
+									定价表
 								</a>
 
 								<b class="arrow"></b>
@@ -721,7 +722,7 @@
 							<li class="">
 								<a href="invoice.html">
 									<i class="icon-caret-right"></i>
-									Invoice
+									发票
 								</a>
 
 								<b class="arrow"></b>
@@ -730,7 +731,7 @@
 							<li class="">
 								<a href="timeline.html">
 									<i class="icon-caret-right"></i>
-									Timeline
+									时间轴
 								</a>
 
 								<b class="arrow"></b>
@@ -739,7 +740,7 @@
 							<li class="">
 								<a href="email.html">
 									<i class="icon-caret-right"></i>
-									Email Templates
+									邮件模板
 								</a>
 
 								<b class="arrow"></b>
@@ -748,7 +749,7 @@
 							<li class="">
 								<a href="login.html">
 									<i class="icon-caret-right"></i>
-									Login &amp; Register
+									登录 &amp; 注册
 								</a>
 
 								<b class="arrow"></b>
@@ -761,9 +762,7 @@
 							<i class="icon-file red"></i>
 
 							<span class="menu-text">
-								Other Pages
-
-								<!-- #section:basics/sidebar.layout.badge -->
+								其它页面  
 								<span class="badge badge-primary">5</span>
 
 								<!-- /section:basics/sidebar.layout.badge -->

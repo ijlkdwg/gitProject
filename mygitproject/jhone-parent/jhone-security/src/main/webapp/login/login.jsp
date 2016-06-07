@@ -62,7 +62,7 @@
 												请输入你的登录信息
 											</h4> 
 											<div class="space-6"></div> 
-											<form>
+											<form action="" id="myform" method="post">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
