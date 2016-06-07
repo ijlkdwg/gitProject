@@ -243,6 +243,12 @@
 		    <version>${casclent.version}</version>
 		</dependency>
 	<!-- cas jar 结束 -->
+	<!-- 新增word扩展包 -->
+		<dependency>
+			<groupId>org.textmining</groupId>
+			<artifactId>tm-extractors</artifactId>
+			<version>0.4</version>
+		</dependency>
 	</dependencies> 
 	<build>
 	 <resources>
