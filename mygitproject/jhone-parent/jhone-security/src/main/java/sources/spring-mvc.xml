@@ -25,5 +25,21 @@
 		<property name="prefix" value="/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-
+<!-- 支持返回json(避免IE在ajax请求时，返回json出现下载 ) -->  
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
+        <property name="messageConverters">  
+            <list>  
+                <ref bean="mappingJacksonHttpMessageConverter"/>  
+            </list>  
+        </property>  
+    </bean>  
+    <bean id="mappingJacksonHttpMessageConverter"  
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">  
+        <property name="supportedMediaTypes">  
+            <list>  
+                <value>text/plain;charset=UTF-8</value>  
+                <value>application/json;charset=UTF-8</value>  
+            </list>  
+        </property>  
+    </bean>  
 </beans>

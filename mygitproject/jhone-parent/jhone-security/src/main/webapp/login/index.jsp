@@ -44,7 +44,7 @@
     top: auto;
     z-index: 12;
 }
-</style>
+</style> 
 <!-------内容头部开始----------->
 <body class="no-skin">
 <div id="navbar" class="navbar navbar-default">

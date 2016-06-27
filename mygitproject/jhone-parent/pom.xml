@@ -12,11 +12,11 @@
 		<module>jhone-controller</module>
 		<module>jhone-service</module>
 		<module>jhone-security</module>
-		<module>jhone-casclient</module>
+		<!-- <module>jhone-casclient</module> -->
 	</modules>
 	<properties>
 		<argLine>-Dfile.encoding=UTF-8</argLine>
-		 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- spring 核心 版本 -->
 		<springframework.version>4.2.6.RELEASE</springframework.version>
 
@@ -46,7 +46,7 @@
 		<!-- beanutils 版本 -->
 		<beanutils.version>1.8.3</beanutils.version>
 		<!-- asm 版本 -->
-		<asm.version>3.3.1</asm.version> 
+		<asm.version>3.3.1</asm.version>
 		<!-- commons-lang -->
 		<lang.version>2.6</lang.version>
 		<!-- commons-dbcp -->
@@ -55,7 +55,7 @@
 		<fileupload.version>1.3.2</fileupload.version>
 		<!-- commons-logging -->
 		<logging.version>1.2</logging.version>
-		<!-- tomcat7 jar  -->
+		<!-- tomcat7 jar -->
 		<tomcat.version>7.0.47</tomcat.version>
 		<!-- mysql 驱动jar -->
 		<connectionjar.version>5.1.39</connectionjar.version>
@@ -64,12 +64,12 @@
 	</properties>
 	<dependencies>
 
-		<!--commons-logging-->
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>${logging.version}</version>
-        </dependency> 
+		<!--commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${logging.version}</version>
+		</dependency>
 		<!-- spring jar 包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -121,11 +121,8 @@
 			<artifactId>spring-web</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-		<!-- <dependency>
-		   <groupId>org.springframework</groupId>
-		   <artifactId>spring-context-support</artifactId>
-		   <version>${spring.version}</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-context-support</artifactId> 
+			<version>${spring.version}</version> </dependency> -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -145,12 +142,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
 			<version>${springframework.version}</version>
-		</dependency> 
-       	<dependency>
-          	<groupId>org.aspectj</groupId>
-          	<artifactId>aspectjweaver</artifactId>
-           	<version>${spring-aspectj.version}</version>
-       	</dependency>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${spring-aspectj.version}</version>
+		</dependency>
 		<!-- Spring jar 包结束 -->
 		<!-- junit jar 包开始 -->
 		<dependency>
@@ -161,9 +158,9 @@
 		</dependency>
 		<!-- junit jar 包结束 -->
 		<dependency>
-   			<groupId>com.googlecode.ehcache-spring-annotations</groupId>
-   			<artifactId>ehcache-spring-annotations</artifactId>
-   			<version>1.2.0</version>
+			<groupId>com.googlecode.ehcache-spring-annotations</groupId>
+			<artifactId>ehcache-spring-annotations</artifactId>
+			<version>1.2.0</version>
 		</dependency>
 		<!-- Shiro jar包开始 -->
 		<dependency>
@@ -191,7 +188,7 @@
 			<artifactId>shiro-cas</artifactId>
 			<version>${shiro.version}</version>
 		</dependency>
-		
+
 		<!-- Shiro jar包结束 -->
 		<!-- 阿里巴巴jar包 -->
 		<dependency>
@@ -204,8 +201,8 @@
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
 		</dependency>
-	<!-- 阿里巴巴jar包 结束 -->
-	<!-- mybatis jar 包 --> 
+		<!-- 阿里巴巴jar包 结束 -->
+		<!-- mybatis jar 包 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
@@ -221,22 +218,22 @@
 			<groupId>org.mybatis.generator</groupId>
 			<artifactId>mybatis-generator-core</artifactId>
 			<version>1.3.2</version>
-		</dependency>  
-	<!-- mybatis jar 结束 -->
-	<!-- mysql 数据库驱动jar -->
-		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>${connectionjar.version}</version>
 		</dependency>
-	<!-- mysql 数据库驱动jar -->
-	<!-- logger jar 包开始-->
-	<dependency>
+		<!-- mybatis jar 结束 -->
+		<!-- mysql 数据库驱动jar -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${connectionjar.version}</version>
+		</dependency>
+		<!-- mysql 数据库驱动jar -->
+		<!-- logger jar 包开始 -->
+		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
-	</dependency>
-	<dependency>
+		</dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${slf4j.version}</version>
@@ -246,59 +243,75 @@
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-	<!-- logger jar 包结束-->
-	<!-- cas jar 开始 -->
+		<!-- logger jar 包结束 -->
+		<!-- cas jar 开始 -->
 		<dependency>
-		    <groupId>org.jasig.cas.client</groupId>
-		    <artifactId>cas-client-core</artifactId>
-		    <version>${casclent.version}</version>
+			<groupId>org.jasig.cas.client</groupId>
+			<artifactId>cas-client-core</artifactId>
+			<version>${casclent.version}</version>
 		</dependency>
-	<!-- cas jar 结束 -->
-	<!-- 新增word扩展包 -->
+		<!-- cas jar 结束 -->
+		<!-- 新增word扩展包 -->
 		<dependency>
 			<groupId>org.textmining</groupId>
 			<artifactId>tm-extractors</artifactId>
 			<version>0.4</version>
 		</dependency>
-	<!-- 添加servlet\jsp包 -->
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>3.1.0</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet.jsp</groupId>
-				<artifactId>javax.servlet.jsp-api</artifactId>
-				<version>2.3.1</version>
-				<scope>provided</scope>
-			</dependency>
-	</dependencies> 
+		<!-- 添加servlet\jsp包 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 添加jackson包 -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+	</dependencies>
 	<build>
-	 <resources>
-          <resource>
-             <directory>src/main/java</directory>
-             <includes>
-                 <include>**/*.xml</include>
-                 <include>**/*.xls</include>
-                 <include>**/*.xsd</include> 
-                 <include>**/*.txt</include>
-                 <include>**/*.docx</include>
-             </includes>
-          </resource>
-          <resource>
-              <directory>src/main/resources</directory>
-              <includes>
-			  	<include>**/*.xml</include>
-                <include>**/*.properties</include>
-                <include>*.properties</include>
-                <include>**/*.xls</include> 
-                <include>**/*.xsd</include> 
-                <include>**/*.txt</include>
-                 <include>**/*.docx</include>
-              </includes>
-         </resource>
-        </resources>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.xls</include>
+					<include>**/*.xsd</include>
+					<include>**/*.txt</include>
+					<include>**/*.docx</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.properties</include>
+					<include>*.properties</include>
+					<include>**/*.xls</include>
+					<include>**/*.xsd</include>
+					<include>**/*.txt</include>
+					<include>**/*.docx</include>
+				</includes>
+			</resource>
+		</resources>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -357,8 +370,8 @@
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>2.6</version>
 				</plugin>
-				
+
 			</plugins>
-		</pluginManagement> 
-	</build>	
+		</pluginManagement>
+	</build>
 </project>

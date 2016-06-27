@@ -94,7 +94,7 @@
         <aop:advisor advice-ref="druid-stat-interceptor"
             pointcut-ref="druid-stat-pointcut" />
     </aop:config>
-    
+     
      <!-- 事物  -->
      <bean id="transactionManager"
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

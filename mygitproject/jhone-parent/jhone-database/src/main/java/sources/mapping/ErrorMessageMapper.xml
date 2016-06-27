@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wsq.jhone.ace.dao.ErrorMessageMapper" >
+  <resultMap id="BaseResultMap" type="com.wsq.jhone.ace.model.ErrorMessage" >
+    <id column="errcode" property="errcode" jdbcType="VARCHAR" />
+    <result column="errsolution" property="errsolution" jdbcType="VARCHAR" />
+    <result column="errDesc" property="errdesc" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    errcode, errsolution, errDesc
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from errormessage
+    where errcode = #{errcode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from errormessage
+    where errcode = #{errcode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wsq.jhone.ace.model.ErrorMessage" >
+    insert into errormessage (errcode, errsolution, errDesc
+      )
+    values (#{errcode,jdbcType=VARCHAR}, #{errsolution,jdbcType=VARCHAR}, #{errdesc,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wsq.jhone.ace.model.ErrorMessage" >
+    insert into errormessage
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="errcode != null" >
+        errcode,
+      </if>
+      <if test="errsolution != null" >
+        errsolution,
+      </if>
+      <if test="errdesc != null" >
+        errDesc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="errcode != null" >
+        #{errcode,jdbcType=VARCHAR},
+      </if>
+      <if test="errsolution != null" >
+        #{errsolution,jdbcType=VARCHAR},
+      </if>
+      <if test="errdesc != null" >
+        #{errdesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wsq.jhone.ace.model.ErrorMessage" >
+    update errormessage
+    <set >
+      <if test="errsolution != null" >
+        errsolution = #{errsolution,jdbcType=VARCHAR},
+      </if>
+      <if test="errdesc != null" >
+        errDesc = #{errdesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where errcode = #{errcode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wsq.jhone.ace.model.ErrorMessage" >
+    update errormessage
+    set errsolution = #{errsolution,jdbcType=VARCHAR},
+      errDesc = #{errdesc,jdbcType=VARCHAR}
+    where errcode = #{errcode,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByCode" parameterType="com.wsq.jhone.ace.model.ErrorMessage" resultMap="BaseResultMap">
+  		select <include refid="Base_Column_List"></include> from errormessage
+  		where <if test="errcode !=null ">errcode = #{errcode,jdbcType=VARCHAR}</if>
+  </select>
+</mapper>

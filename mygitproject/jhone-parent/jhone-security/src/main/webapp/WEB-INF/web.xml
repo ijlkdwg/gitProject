@@ -76,5 +76,24 @@
 		<listener-class>org.springframework.web.util.Log4jConfigListener
 		</listener-class>
 	</listener>
-	
+	<!-- 配置session超时时间，单位分钟 -->  
+    <session-config>  
+        <session-timeout>15</session-timeout>  
+    </session-config>  
+	<error-page>  
+        <error-code>405</error-code>  
+        <location>/WEB-INF/405.html</location>  
+    </error-page>  
+    <error-page>  
+        <error-code>404</error-code>  
+        <location>/WEB-INF/404.jsp</location>  
+    </error-page>  
+    <error-page>  
+        <error-code>500</error-code>  
+        <location>/WEB-INF/500.jsp</location>  
+    </error-page>  
+    <error-page>  
+        <error-code>java.lang.Throwable</error-code>  
+        <location>/WEB-INF/500.jsp</location>  
+    </error-page> 
 </web-app>

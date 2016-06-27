@@ -15,6 +15,11 @@
      <!-- 引入咱自己的jar包封装Ok打包完成 -->
      <dependency>
      	<groupId>com.wsq</groupId>
+     	<artifactId>jhone-database</artifactId>
+     	<version>0.0.1-SNAPSHOT</version>
+     </dependency>
+     <dependency>
+     	<groupId>com.wsq</groupId>
      	<artifactId>jhone-security</artifactId>
      	<version>0.0.1-SNAPSHOT</version>
      </dependency>

@@ -30,13 +30,20 @@
  	<script src="<%=request.getContextPath()%>/bootstrap/js/ace-elements.min.js"></script>
 	<!--[if lt IE 9]>
 	<script src="<%=request.getContextPath() %>/bootstrap/js/html5shiv.js"></script>
-	<script src="<%=request.getContextPath() %>/bootstrap/js/respond.min.js"></script>
+	<script src="<%=request.getContextPath() %>/bootstrap/js/respond.min.js"></script> 
 	<![endif]-->
+	<script src="<%=request.getContextPath() %>/bootstrap/otherjs/html5Ie.js"></script> 
 	<!--[if lte IE 8]>
 	  <script src="<%=request.getContextPath() %>/bootstrap/js/excanvas.min.js"></script>
 	<![endif]-->  
-</head>  
-	<body class="login-layout">
+	<script src="http://ditu.google.com/maps?file=api&hl=zh-CN&v=2&key=AIzaSyCHV8c9Xzm0wrlPOSrLlIdY29TiIAyzUtg" type="text/javascript"></script>
+	<script type="text/javascript">
+	//732140506889656  facebook key 
+	//42ab09ff57b11e6e28a5595be670e167 百度地图key
+	//AIzaSyCHV8c9Xzm0wrlPOSrLlIdY29TiIAyzUtg  谷歌地图key
+</script>
+</head>   
+	<body class="login-layout"> 
 		<div class="main-container">
 			<div class="main-content">
 				<div class="row">
@@ -62,7 +69,7 @@
 												请输入你的登录信息
 											</h4> 
 											<div class="space-6"></div> 
-											<form action="" id="myform" method="post">
+											<form action="checklogin" id="myform" method="post">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -85,7 +92,7 @@
 															<span class="lbl">记住我</span>
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button class="width-35 pull-right btn btn-sm btn-primary" type="submit">
 															<i class="icon-key"></i>
 															<span class="bigger-110">登录</span>
 														</button>
@@ -100,10 +107,10 @@
 
 											<div class="space-6"></div>
 
-											<div class="social-login center">
-												<a class="btn btn-primary">
-													<i class="icon-facebook"></i>
-												</a>
+											<div  class="social-login center">
+												<a class="btn btn-primary">  
+												<i class="icon-facebook" id="status" data-share="true" data-width="450" data-show-faces="true"></i>
+												 </a>
 
 												<a class="btn btn-info">
 													<i class="icon-twitter"></i>
@@ -245,22 +252,8 @@
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.signup-box -->
-							</div><!-- /.position-relative -->
-
-							<div class="navbar-fixed-top align-right">
-								<br />
-								&nbsp;
-								<a id="btn-login-dark" href="#">黑色 </a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-blur" href="#">蓝色</a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-light" href="#">灰色</a>
-								&nbsp; &nbsp; &nbsp;
-							</div>
+							</div><!-- /.position-relative --> 
+						 
 						</div>
 					</div><!-- /.col -->
 				</div><!-- /.row -->
@@ -281,7 +274,7 @@
 </script>
 <![endif]-->	
 <script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='<%=request.getContextPath() %>/bootstrap/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- inline scripts related to this page -->
@@ -293,31 +286,7 @@
 				$('.widget-box.visible').removeClass('visible');//hide others
 				$(target).addClass('visible');//show target
 			 });
-			}); 
-			//这个不是必要的引入 , 紧紧为改变页面的背景颜色而写的方法 ，在ace.min.css里面定义的
-			jQuery(function($) {
-			 $('#btn-login-dark').on('click', function(e) {
-				$('body').attr('class', 'login-layout');
-				$('#id-text2').attr('class', 'white');
-				$('#id-company-text').attr('class', 'blue');
-				
-				e.preventDefault();
-			 });
-			 $('#btn-login-light').on('click', function(e) {
-				$('body').attr('class', 'login-layout light-login');
-				$('#id-text2').attr('class', 'grey');
-				$('#id-company-text').attr('class', 'blue');
-				
-				e.preventDefault();
-			 });
-			 $('#btn-login-blur').on('click', function(e) {
-				$('body').attr('class', 'login-layout blur-login');
-				$('#id-text2').attr('class', 'white');
-				$('#id-company-text').attr('class', 'light-blue'); 
-				e.preventDefault();
-			 });
-			 
-			});
+			});  
 		</script> 	
 </body>
 </html>
